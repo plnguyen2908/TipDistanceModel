@@ -1,0 +1,44 @@
+---
+title: "Relation between travel distance and taxi tip in New York City proposal"
+author: "Project 2: Manh Nguyen, Leos Nguyen, Dylan Nguyen, Zhuoyu Jiang"
+output: html_document
+---
+
+**Introduction**
+
+In the real world, the taxi fare in New York City is determined by a piecewise function $f(x)$ that gives the price when x is in a particular range. Despite that fact, there is a type of value that is not predictable, which is the tip that each passenger in New York gives to the driver. Logically, the conventional thought is that the value of tip would be positively proportional to the travel distance as $y = kx$ where y is the amount of tip, x is the travel distance, and k is a positive number greater than 1. However, our team suspects this convention and wants to see whether the amount of tip is predictable by using the distance. In particular, we want to see whether the relationship behaves differently in pre-Covid, in-Covid, and post-Covid. Moreover, we want to come up with a better model to predict the amount of tip based on additional variables beside distance. 
+
+**Dataset**
+
+  - Pre-Covid dataset: https://www.kaggle.com/datasets/elemento/nyc-yellow-taxi-trip-data (2015-2016)
+  - In-Covid dataset: https://www.kaggle.com/datasets/microize/newyork-yellow-taxi-trip-data-2020-2019 (2019- 2020)
+  - Post-Covid dataset: https://www.kaggle.com/datasets/ashvanths/nyc-yellow-taxi (2021-2022)
+
+Demo of code that reads in the data: 
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+
+```{r}
+file <- read_csv("yellow_tripdata_2020-06.csv")
+```
+
+**Variables**
+
+  Here, we will use 4 variables of the dataset which are tip_amount, trip_distance, passenger_count, and lastly the year itself. 
+    
+**Statistical Method**
+
+  - Our first statistical method is to use polynomial regression to determine the relationship between the variable tip_amount and trip_distance in the 3 periods.
+  - Our second statistical method is to build a neural network to predict the tip_amount by using 3 variables which are the trip_distance, passenger_count, and the period of the year itself.
+
+**Statistical Method**
+
+  - Step 1: We do data modeling and combining csv files for 3 periods parallelly.
+  - Step 2: We will divide the data in step 1 into 2 chunks called train and test with the proportion of 75% and 25% respectively.
+  - Step 3: We will compute the polynomial regression with the degree up to 10 for the train data of each period. Then, we will verify it with the test data to find the best model. Next, we will repeat step 2 and step 3 by 50 times to make sure that the probability wrong model reduce to (0.9)^50 ~= 0.003
+  - Step 4: We will combine all 3 periods and divide it into 2 chunks like in step 2
+  - Step 5: we will train the neural network based on the data provided in step 3
+  - Step 6: Draw the graph for step 3 and report the data accuracy for step 5.
