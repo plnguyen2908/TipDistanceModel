@@ -12,7 +12,7 @@ We will use the following dataset:
 
 ## Read Data
 
-To read the parquet and conver it to csv, please look at the read.py file. Before reading it, please do:
+To read the parquet and convert it to csv, please look at the read.py file. Before reading it, please do:
 
 - pip install pandas
 - pip install pyarrow
