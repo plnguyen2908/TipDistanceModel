@@ -19,5 +19,5 @@ To read the parquet and convert it to csv, please look at the read.py file. Befo
 
 To run the file:
 - open the terminal of the folder that contains your dataset
-- run python read.py <dataset> if you are on window
-- run python3 read.py <dataset> if you are on mac
+- run python read.py [dataset in parquet form] if you are on window
+- run python3 read.py [dataset in parquet form] if you are on mac
