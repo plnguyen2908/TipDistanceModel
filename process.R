@@ -7,7 +7,7 @@ file = paste("yellow_tripdata_",args[1],"-",args[2],".csv", sep="")
 # data = read.csv("yellow_tripdata_2019-01.csv")
 data = read.csv(file)
 
-print(data)
+# print(data)
 
 
 data1 = data %>% 
