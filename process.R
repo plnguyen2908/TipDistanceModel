@@ -25,3 +25,5 @@ data1 = data %>%
     year = substring(tpep_pickup_datetime,1,4)
   ) %>% 
   select(-tpep_pickup_datetime)
+# print(paste(substring(file, 1, nchar(file) - 4), "_new", ".csv", sep = ""))
+write.csv(data1, file = paste(substring(file, 1, nchar(file) - 4), "_new", ".csv", sep = ""))
