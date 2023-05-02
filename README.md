@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-You can download all the files and run ./submit.sh
+You can download all the files and run ./submit.sh. The polynomial regression result will be in files: train.csv_result_pre_0, train.csv_result_in_0, train.csv_result_post_0. The decision tree will be in the job's output file
 
 ## Dataset
 
