@@ -21,3 +21,13 @@ To run the file:
 - open the terminal of the folder that contains your dataset
 - run python read.py [dataset in parquet form] if you are on window
 - run python3 read.py [dataset in parquet form] if you are on mac
+
+For example: python read.py https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2022-01.parquet
+
+## Modelling data
+
+To trim the data, run Rscript process.R \<year\> <month from 01 to 12>. 
+
+In the dataset, we only consder data that has trip distance in range [0, 20] miles, tip amount in range [0,10] dollar, and fare amount in range [0, 100] dollar.
+
+For example: Rscript process.R 2019 01 will return yellow_tripdata_2022-01_new.csv with trimmed data
