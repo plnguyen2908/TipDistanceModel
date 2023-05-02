@@ -59,7 +59,5 @@ Rscript regression.R train.csv test.csv
 
 mv train.csv_result "train.csv_result_post_$2"
 
-head -n 100000 train.csv > train_post.csv
-
 rm -f train.csv
 rm -f test.csv
