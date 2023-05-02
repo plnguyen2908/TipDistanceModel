@@ -1,0 +1,22 @@
+log    =    log/$(Cluster)_$(file).log
+error  =  error/$(Cluster)_$(file).err
+output = output/$(Cluster)_$(file).out
+
+universe = vanilla
+
+executable = ./part2.sh
+arguments = allList
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = python39.tar.gz, PythonPackages.tar.gz, read.py, allList, train.py, R413.tar.gz, packages_FITSio_tidyverse.tar.gz, process.R, part2.sh
+
++WantGPULab = true
++GPUJobLength = "medium"
+
+request_gpus = 1
+request_cpus = 24
+request_memory = 100GB
+request_disk = 20GB
+
+queue 1
