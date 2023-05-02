@@ -12,6 +12,6 @@ transfer_input_files = python39.tar.gz, PythonPackages.tar.gz, read.py, R413.tar
 
 request_cpus = 12
 request_memory = 100GB
-request_disk = 100GB
+request_disk = 10GB
 
 queue 1
