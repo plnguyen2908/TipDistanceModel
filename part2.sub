@@ -12,9 +12,9 @@ when_to_transfer_output = ON_EXIT
 transfer_input_files = python39.tar.gz, PythonPackages.tar.gz, read.py, allList, train.py, R413.tar.gz, packages_FITSio_tidyverse.tar.gz, process.R, part2.sh
 
 +WantGPULab = true
-+GPUJobLength = "medium"
++GPUJobLength = "long"
 
-request_gpus = 1
+request_gpus = 6
 request_cpus = 24
 request_memory = 100GB
 request_disk = 20GB
